@@ -1,0 +1,311 @@
+// masthead.scss
+
+#masthead {
+    background-color: $color__brand-seagreen;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid $color__brand-pink;
+    @include padding-left-right;
+
+    a, a:active, a:focus {
+        outline: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .toggled {
+        display: block;
+        position:absolute;
+        top: 81px;
+        left: 0;
+        right: 0;
+        height:auto;
+        text-align: center;
+        background-color: $color__brand-gray;
+        color: #fff;
+        overflow:hidden;
+        z-index:9999;
+
+        .menu-mobile-menu-container {
+            display: block !important;;
+            padding-top: 1.5em;
+
+            ul {
+                display: block !important;
+                list-style: none;
+                margin: 0;
+                padding:0;
+                @include padding-left-right;
+                text-align: left;
+
+                .current-menu-item {
+                    color:$color__brand-pink;
+                }
+
+                li {
+                    display: block !important;
+                    margin: 0;
+                    padding-bottom: 1em;
+                    position: relative;
+
+                    a {
+                        font-family: $font__light;
+                        color:#fff;
+                        display: block !important;
+                        padding:0;
+                        text-decoration:none;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+
+                        &:before {
+                            content: '\25b6';
+                            color: #fff;
+                            font-size: .5em;
+                            margin-right: 10px;
+                            vertical-align: middle;
+                            // position: absolute;
+                        }
+
+                        @include respond-to(small-land) {
+                            font-size: 1.5rem;
+                        }
+
+                        @include respond-to(medium) {
+                            font-size: 1.8rem;
+                        }
+
+                        &:hover, &:visited, &:active, :link {
+                            color: #fff;
+                        }
+
+                        ul {
+                            li {
+                                a {
+                                    text-transform: capitalize;
+                                    text-decoration: none;
+                                    font-size: .9em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include respond-to(small) {
+            top:106px
+        }
+
+        @include respond-to(large) {
+            display: none;
+        }
+    }
+
+    .masthead-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+        padding: .5em 0;
+
+        .site-branding {
+            flex: 1;
+            // align-self: flex-end;
+            // margin-top: 5px;
+
+            img {
+                max-width: 135px;
+
+                @include respond-to('small') {
+                    max-width: 200px;
+                }
+
+                @include respond-to('large') {
+                    max-width: 250px;
+                    padding-top: .5em;
+                    padding-bottom: .5em;
+                }
+
+                @include respond-to('x-large') {
+                    max-width: 300px;
+                }
+            }
+
+            @include respond-to(large) {
+                flex: none;
+            }
+        }
+
+        .main-navigation {
+            flex: 1;
+            align-self: flex-end;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            .masthead-phone {
+                text-align: right;
+                color: #000;
+                font-family: $font__extra-bold;
+                margin-bottom: 5px;
+
+                span {
+                    display: none;
+                    margin-right: .5em;
+
+                    @include respond-to('tablet') {
+                        display: inline-flex;
+                    }
+                }
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+                    font-family: $font__extra-bold;
+                    font-size: 1.188rem;
+
+                    @include respond-to(small) {
+                        font-size: 1.267rem;
+                    }
+                }
+            }
+
+            .menu-toggle {
+                background-color: $color__brand-gray;
+                color: #fff;
+                font-family: $font__regular;
+                font-size: 0.9333rem;
+                text-transform: uppercase;
+                width: 72px;
+                margin-left: auto;
+                padding: .5em;
+
+                @include respond-to(small) {
+                    font-size: 1rem;
+                    width: 78px;
+                }
+            }
+
+            .menu-primary-container {
+                display: none;
+                color: #000;
+
+                ul {
+                    list-style-type: none;
+
+                    .current-menu-item {
+
+                        a {
+                            color: #000;
+                            font-family: $font__bold;
+                        }
+                    }
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            padding: 1.5em;
+                            color: #000;
+                            text-decoration: none;
+                            font-family: $font__light;
+
+                            &:before {
+                                content: '\25b6';
+                                color: #000;
+                                font-size: .5em;
+                                margin-right: 5px;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include respond-to('small-land') {
+            padding-top: .5em;
+
+            .menu-toggle {
+                margin-top: .20em;
+            }
+        }
+
+        @include respond-to('tablet') {
+
+            .main-navigation {
+                flex: 2;
+            }
+        }
+
+        @include respond-to('large') {
+            line-height: 1;
+            @include reset;
+
+            .main-navigation {
+                text-align: right;
+
+                .menu-toggle {
+                    display: none;
+                }
+
+                .masthead-phone {
+                    font-size:  1.4rem;
+
+                    a {
+                        font-size: 2.4rem;
+                    }
+                }
+
+                .menu-primary-container {
+                    display: inline-block;
+
+                    ul {
+                        display: inline-flex;
+                        padding: 0;
+
+                        li {
+                            padding-left: 10px;
+
+                            @media screen and (min-width:1300px) {
+                                padding-left: 20px;
+                            }
+
+                            a {
+                                @include reset;
+                                font-size: 1rem;
+
+                                @media screen and (min-width:1300px) {
+                                    font-size: 1.1rem;
+                                }
+
+                                @media screen and (min-width:1400px) {
+                                    font-size: 1.2rem;
+                                }
+
+                                @include respond-to(x-large) {
+                                    font-size: 1.3rem;
+                                }
+
+                                @media screen and (min-width:1600px) {
+                                    font-size: 1.4rem;
+                                }
+
+                                &:last-child {
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to(x-large) {
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+} // #masthead

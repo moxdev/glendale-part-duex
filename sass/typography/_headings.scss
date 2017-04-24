@@ -1,0 +1,68 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+    color: $color__brand-black;
+    @include reset;
+    font-weight:normal;
+}
+
+h1 {
+    margin: .5em 0;
+    line-height: 1;
+}
+
+h2 {
+    // font-family: $font__bold;
+    // font-size: 1.438rem;
+    // margin: .5em 0;
+    line-height: 1;
+}
+
+.section-header {
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $color__brand-gray;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &:before {
+        top: 11px ;
+
+        @include respond-to(medium) {
+            top:16px;
+        }
+    }
+
+    &:after {
+        bottom: 10px;
+
+        @include respond-to(medium) {
+            bottom: 11px;
+        }
+    }
+
+    h2 {
+        @include reset;
+        font-family: $font__black;
+        color: $color__brand-gray;
+        background-color: #fff;
+        font-size: 1.933rem;
+        text-align: center;
+        padding: 0 .4em;
+        display: inline-block;
+        position: relative;
+        z-index: 5;
+
+        @include respond-to(medium) {
+            font-size: 2.467rem;
+        }
+    }
+}

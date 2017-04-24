@@ -1,0 +1,10 @@
+.error404 {
+    .site-content {
+        min-height: 400px;
+        .page-content {
+            @include respond-to(medium) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,218 @@
+.page-template-page-amenities {
+
+    .feature-amenities-wrapper {
+        margin-bottom: 3em;
+    }
+
+    .section-header {
+        margin-bottom: 1.250em;
+
+        h2 {
+            padding: 0 .1em;
+
+            @include respond-to(small) {
+                padding: 0 .4em;
+            }
+        }
+
+        @include respond-to(medium) {
+            margin-bottom: 1.688em;
+
+
+        }
+    }
+
+    #features-section {
+        margin-bottom: 4em;
+
+    }
+    .features-wrapper,
+    .amenities-wrapper {
+        @include max-width(1200px);
+        @include padding-left-right;
+        display: flex;
+        flex-wrap:wrap;
+        margin: 0 -1px;
+    }
+
+    .has-img {
+        background-color: transparent;
+    }
+
+    .highlight {
+        border: 1px solid #FFF;
+        background-color: rgba(0, 0, 0, .1);
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        font-family: $font__regular;
+
+        &:after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        @include respond-to('small-land') {
+            width: 33%;
+        }
+
+        @include respond-to('tablet') {
+            width: 25%;
+        }
+
+        @include respond-to('medium') {
+            width: 20%;
+        }
+    }
+
+    .highlight-inner {
+        text-align: center;
+        position: absolute;
+        left: 1px;
+        right: 1px;
+        top: 1px;
+        bottom: 1px;
+        padding: 1em;
+        overflow: hidden;
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img,
+        span,
+        .view {
+            transition: opacity .25s ease-in-out ;
+        }
+
+        span,
+        .view {
+            position: relative;
+            z-index: 5;
+        }
+
+        span {
+            max-width: 100%;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            z-index: 1;
+            opacity: .2;
+        }
+
+        .close {
+            position: absolute;
+            top: .3em;
+            right: .3em;
+            opacity: 0;
+            color: #000;
+            font-size:  1.733rem;
+            background-color: $color__brand-seagreen;
+            font-family: $font__regular;
+            text-decoration: none;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            border-radius: 50%;
+            border: 3px solid #000;
+            box-shadow:
+                0 0 0 1px hsl(0, 0%, 0%);
+            z-index: 2;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @include respond-to(medium) {
+                width: 45px;
+                height: 45px;
+                font-size: 1.667rem;
+            }
+        }
+
+        .view {
+            background-color: transparent;
+            text-decoration: underline;
+            color: #000;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @include respond-to(medium) {
+                font-size: 1.067rem;
+            }
+        }
+    }
+
+    .highlight-inner.active img,
+    .highlight-inner.active .close {
+        opacity: 1;
+    }
+
+    .hihglight-inner.active .close:hover {
+        cursor: pointer;
+    }
+
+    .highlight-inner.active span,
+    .highlight-inner.active .view {
+        opacity: 0;
+    }
+
+    .highlight-inner.active span,
+    .highlight-inner.active .view:hover {
+        cursor: default;
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-size: .9rem;
+        line-height: 1.1;
+        font-family: $font__regular;
+        max-width: 100%;
+        -ms-flex: 1 0 auto;
+        flex: 0 1 auto;
+
+        @include respond-to(large) {
+            font-size: 1.533rem;
+        }
+    }
+
+    .view {
+        font-size: 0.8667rem;
+
+        @include respond-to('large') {
+            font-size: 1rem;
+        }
+    }
+
+    // for equal spacing of text inside highlight
+    .hide-btn {
+        visibility: hidden;
+        // display: none;
+    }
+
+    .disclaimer {
+        font-size: 0.8125rem;
+        font-family: $font__regular;
+        text-align: center;
+        padding-top: 1em;
+
+        @include respond-to(medium) {
+            font-size: 1rem;
+        }
+    }
+}

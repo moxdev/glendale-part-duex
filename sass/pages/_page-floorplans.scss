@@ -1,0 +1,129 @@
+.page-template-page-floorplans {
+
+    #floorplans-section {
+        text-align: center;
+        // @include padding-left-right;
+        // @include max-width(1100px);
+
+        .view-btn {
+            display: none;
+            text-transform: uppercase;
+            font-size: 1.133rem;
+            font-family: $font__regular;
+            background-color: transparent;
+
+            @include respond-to('medium') {
+                display: none;
+            }
+        }
+
+        .description,
+        .sqft,
+        .availability-link button {
+            text-transform: uppercase;
+        }
+
+        .description {
+            color: $color__brand-black;
+            font-family: $font__extra-bold;
+            font-size: 1.333rem;
+
+            @include respond-to(medium) {
+                font-size: 1.533rem;
+            }
+        }
+        .sqft {
+            font-family: $font__regular;
+            font-size: 1.2rem;
+
+            @include respond-to(medium) {
+                font-size: 1.267rem;
+            }
+
+        }
+
+        .availability-link {
+            font-family: $font__regular;
+            font-size: 1rem;
+            color: $color__brand-black;
+
+            @include respond-to(medium) {
+                font-size: 1.133rem;
+            }
+
+            button {
+                padding: .75em 1em;
+                margin-top: .5em;
+                color: $color__brand-black;
+                font-size: 1rem;
+            }
+
+        }
+
+        .floorplans-wrapper {
+
+            .view-hide-wrapper {
+                display: block;
+
+                @include respond-to(medium) {
+                    display: block !important;
+                }
+            }
+
+            .fp-models {
+
+                .one-bedroom-section,
+                .two-bedroom-section,
+                .three-bedroom-section {
+                    margin-bottom: 4em;
+                    @include padding-left-right;
+                    @include max-width(1100px);
+
+                    @include respond-to('small-land') {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+
+                .fp-models-wrapper {
+                    padding-top: .5em;
+
+                    .floorplan {
+                        padding: 1em 0;
+                    }
+
+                    @include respond-to('small-land') {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+
+                        .floorplan {
+                            width: 50%;
+                            padding: 2em;
+                        }
+                    }
+
+                    @include respond-to('tablet') {
+
+                        .floorplan {
+                            width: 33%;
+                        }
+                    }
+
+                    @include respond-to('large') {
+
+                        .floorplan {
+                            // padding: 2.5em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .active {
+            display: block !important;
+
+        }
+    }
+}

@@ -1,0 +1,164 @@
+.page-template-page-lanham {
+
+    #map-wrapper {
+        display: none;
+        position: relative;
+        @include max-width(1100px);
+
+        #map-canvas {
+            min-height: 500px;
+        }
+
+        #reset-map {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 25;
+            transition:opacity .25s;
+            opacity: 0;
+            background-color: $color__brand-black;
+            color: #fff;
+            font-size: 1rem;
+            padding: .5em 1em;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+
+        #map-nav {
+            background-color: $color__alt-gray;
+            ul {
+                display: flex;
+                justify-content:center;
+                @include reset;
+                overflow: hidden;
+                margin-right: -1px;
+
+                li {
+                    flex: 1;
+                    text-align: center;
+                    list-style-type: none;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    border-right: 1px solid #fff;
+
+                    a {
+                        color: $color__brand-black;
+                        text-transform: uppercase;
+                        font-family: $font__regular;
+                        font-size: 1.267rem;
+                        text-decoration: none;
+                        position: relative;
+                        align-self: flex-end;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: .5em 0;
+
+                        &:before {
+                            display: block;
+                            text-align: center;
+                        }
+
+                        &:active,
+                        &:focus,
+                        &.active {
+                          background-image: none;
+                          outline: 0;
+                          -webkit-box-shadow: none;
+                                  box-shadow: none;
+                        }
+                    }
+                }
+            }
+
+            .recreation {
+                a {
+                    &:before {
+                        content: url('imgs/recreation-50.png');
+                    }
+                }
+            }
+
+            .restaurants {
+
+                a {
+                    &:before {
+                        content: url('imgs/restaurants-40.png');
+                    }
+                }
+            }
+
+            .shopping {
+                a {
+                    &:before {
+                        content: url('imgs/shopping-50.png');
+                    }
+                }
+            }
+        }
+    }
+
+    .community-listing-header {
+        color: $color__brand-gray;
+        font-size: 1.333rem;
+        font-family: $font__black;
+        text-transform: uppercase;
+        margin-top: 1.5em;
+        margin-bottom: .5em;
+    }
+
+    .community-listing {
+        @include reset;
+        font-family: $font__light;
+
+        li {
+            list-style-type: none;
+            margin-bottom: 2em;
+
+            .comm-name {
+                font-size: 0.9333rem;
+                color: #333;
+                font-family: $font__bold;
+            }
+
+            a {
+                color: inherit;
+                font-size: 0.9333rem;
+                text-decoration-color: $color__brand-gray;
+            }
+        }
+    }
+
+    @include respond-to('small') {
+        .landmark-inner-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .community-listing-wrapper {
+                flex: 1 0 50%;
+            }
+        }
+    }
+
+    @include respond-to('medium') {
+        #map-wrapper {
+            display: block;
+        }
+
+        #landmark-listing {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+

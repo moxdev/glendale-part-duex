@@ -1,0 +1,30 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	border-radius: 0;
+	background: $color__background-button;
+	color: $color__button;
+	@include font-size(0.75);
+	line-height: 1;
+	padding: .6em 1em .4em;
+
+	&:active,
+	&::focus,
+	&:active {
+	  background-image: none;
+	  outline: 0;
+	  -webkit-box-shadow: none;
+	          box-shadow: none;
+	}
+
+	// &:hover {
+	// 	border-color: $color__border-button-hover;
+	// }
+
+	// &:active,
+	// &:focus {
+	// 	border-color: none;
+	// }
+}

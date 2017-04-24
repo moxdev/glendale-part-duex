@@ -1,0 +1,20 @@
+.page-template-page-availability {
+
+    #page {
+
+        .site-content {
+
+            .content-wrapper {
+                max-width: 1200px !important;
+            }
+
+            iframe {
+                border: none;
+            }
+        }
+    }
+
+    #vW tr.labels td {
+        background-color: $color__brand-black !important;
+    }
+}

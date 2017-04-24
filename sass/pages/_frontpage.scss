@@ -1,0 +1,154 @@
+.page-template-frontpage {
+
+    .page-header-front-page.has-thumb {
+        background-repeat:no-repeat;
+        background-size: cover;
+        @include max-width(1300px);
+
+        h1 {
+            @include reset;
+            @include padding-left-right;
+            color:#FFF;
+            font-size:1.733rem;
+            font-family:$font__black;
+            padding-top: 2.25em;
+            padding-bottom: 2.25em;
+            text-shadow:0 0 20px rgba(0, 0, 0, 1);
+            text-align: center;
+            font-weight: normal;
+            letter-spacing: 1px;
+
+            @include respond-to(small) {
+                font-size: 2em;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+
+            @include respond-to(small-land) {
+                font-size: 2.5em;
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+            }
+
+            @media screen and (min-width:620px) {
+                font-size: 3em;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+
+            @include respond-to(tablet) {
+                font-size: 3.5em;
+                text-align: center;
+            }
+
+            @include respond-to(medium) {
+                font-size: 3.938rem;
+            }
+
+            @include respond-to(x-large) {
+                padding-top: 3em;
+                padding-bottom: 3em;
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+            }
+
+            @media screen and (min-width:1440px) {
+                padding-top: 2.5em;
+                padding-bottom: 2.5em;
+                font-size: 4.75em;
+                padding-left: 2em;
+                padding-right: 2em;
+            }
+        }
+
+        @include respond-to(large) {
+            min-height: 500px;
+            max-height: 500px;
+        }
+    }
+
+    #page {
+        .site-content {
+            .content-wrapper {
+                max-width: 1300px;
+                #primary {
+
+                    @include respond-to(medium) {
+                        padding-left: 4em;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+
+                    @include respond-to(large) {
+                        padding-left: 5em;
+                    }
+                }
+            }
+        }
+    }
+
+    .content-wrapper {
+
+        @include respond-to(medium) {
+            background-image: url(imgs/deco-background.svg);
+            background-repeat: repeat-y;
+            background-attachment: scroll;
+            background-size: auto 20%;
+            background-position: left 1em top;
+        }
+
+        @include respond-to(large) {
+            padding-left: 0;
+            padding-right: 0;
+            background-size: auto 40%;
+        }
+    }
+
+    .entry-header {
+        line-height: 1;
+        text-align: center;
+        @include reset;
+        h2 {
+            color: $color__h2;
+            font-family: $font__bold;
+            font-size: 2.667rem;
+            @include reset;
+            margin-bottom: .25em;
+
+            span {
+                color: #999999;
+                font-family: $font__regular;
+                font-size: 1.8rem;
+            }
+        }
+        h3 {
+            @include reset;
+            font-size: 1.4rem;
+            font-family: $font__light;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        @include respond-to(medium) {
+            text-align: left;
+
+            h2 {
+                font-size: 4.4rem;
+
+                span {
+                    font-size:  3.067rem;
+                }
+            }
+
+            h3 {
+                font-size: 2.2rem;
+            }
+        }
+
+        // @include respond-to(medium) {
+        //     h3 {
+        //         font-size: 2.563rem;
+        //     }
+        // }
+    }
+}

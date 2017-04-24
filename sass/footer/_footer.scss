@@ -1,0 +1,137 @@
+// footer.scss
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include padding-left-right;
+    background-color: $color__brand-black;
+    color: #fff;
+    text-align: center;
+    font-family: $font__regular;
+    // border-bottom: 5px solid #fff;
+    font-size: 0.8rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    line-height: 1.25;
+
+    h2 {
+        color: #fff;
+        font-size: 1.133rem;
+        margin-bottom: .25em;
+        font-family: $font__extra-bold;
+
+        @include respond-to('tablet') {
+            font-size: 1.2em;
+            line-height: 1.5
+        }
+    }
+
+    .contact-section {
+
+        .contact-wrapper {
+            .contact-numbers {
+                padding-top: 1em;
+            }
+        }
+        .hours {
+            margin-top: 1em;
+
+            @include respond-to('tablet') {
+                margin-top: 0;
+            }
+        }
+
+        .resident-button {
+            display: none;
+            text-transform: uppercase;
+            margin-top: 2em;
+            text-decoration: none;
+            padding: .5em 1em;
+            font-family: $font__bold;
+            background: $color__background-button;
+            color: $color__button;
+            line-height: 1;
+            font-size: 1rem;
+        }
+
+        @include respond-to('tablet') {
+            max-width: 400px;
+            flex: 1;
+            // margin: auto;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+
+            .resident-button {
+                display: block;
+            }
+        }
+    }
+
+    .icons-section {
+        margin-top: 2em;
+        .social {
+            h2 {
+                margin-bottom: .5em;
+            }
+
+            a {
+                padding: 5px;
+            }
+
+            svg {
+                max-width: 42px;
+            }
+
+            @include respond-to('tablet') {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+
+        .brand {
+            margin-top: 1.25em;
+
+            svg {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+        }
+
+        .translate {
+            margin-top: 1.5em;
+
+        }
+
+        .mm4 {
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+            font-size: 0.75rem;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-family: $font__light;
+            }
+
+        }
+
+        @include respond-to('tablet') {
+            flex: 1;
+            margin: auto;
+            text-align: right;
+        }
+    }
+
+    @include respond-to('tablet') {
+        border-top: 5px solid #fff;
+        flex-direction: row;
+        padding-bottom: 2.5em;
+    }
+
+    @include respond-to('large') {
+        font-size: 1em;
+    }
+} // site-footer

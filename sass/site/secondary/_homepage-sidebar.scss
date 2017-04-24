@@ -1,0 +1,208 @@
+.home {
+
+    #secondary {
+        background-image: url(imgs/deco-background.svg);
+        background-repeat: repeat-y;
+        background-attachment: scroll;
+        background-position: right 100%;
+        background-size: 82px 53%;
+
+        .sidebar-wrapper {
+            line-height: 1.25;
+
+            h2 {
+                line-height: 1;
+                color: $color__brand-black;
+                text-transform: uppercase;
+                font-family: $font__black;
+            }
+
+            .sidebar-specials {
+                background-color: $color__brand-pink;
+                padding: 1em;
+                border-top: 2px solid $color__brand-black;
+                border-bottom: 2px solid $color__brand-black;
+                min-height: 180px;
+
+                h2 {
+                    color: $color__brand-black;
+                    font-family: $font__black;
+                    text-transform: uppercase;
+                    font-size: 2.267rem;
+                    @include reset;
+                }
+
+                h3 {
+                    font-family: $font__bold;
+                    font-size:  1.333rem;
+                    line-height: 1;
+                    padding-top: .25em;
+                }
+
+                h4 {
+                    font-family: $font__regular;
+                    margin: 1rem 0;
+                    font-size: 0.8rem;
+                    line-height: 1.25;
+                }
+
+                @include respond-to('small-land') {
+                    text-align:center;
+                }
+
+                @include respond-to('medium') {
+
+                    h2 {
+                        font-size:  2.933rem;
+                        line-height: .9;
+                    }
+
+                    h3 {
+                        font-size: 1.333rem;
+                        line-height: 1.2;
+                    }
+                }
+            }
+
+            .sidebar-events {
+                padding: 1em .5em;
+                border-bottom: 2px solid $color__brand-black;
+
+                h2 {
+                    @include reset;
+                    font-size: 1.8rem;
+                    color: $color__brand-gray;
+                    font-family: $font__black;
+                    text-transform: uppercase;
+
+                }
+
+                h3 {
+                    font-family: $font__bold;
+                    font-size:  1.333rem;
+                    padding: 0;
+                    padding-top: .5rem;
+                    line-height: 1;
+                }
+
+                p {
+                    font-family: $font__regular;
+                    font-size: 0.9333rem;
+                    line-height: 1.4;
+                }
+
+                @include respond-to(medium) {
+                    h2 {
+                        font-size: 2.267rem;
+                    }
+
+                    h3 {
+                        font-size: 1.4rem;
+                    }
+
+                    p {
+                        font-size: 1.067rem;
+                    }
+                }
+            }
+
+            .sidebar-pets {
+                padding:1em .5em;
+                border-bottom: 2px solid $color__brand-black;
+
+                h2 {
+                    padding-right: 5px;
+                    line-height: 1.1;
+                    font-size: 1.4rem;
+                    font-family: $font__black;
+                    color: $color__brand-gray;
+                    text-transform: uppercase;
+
+                    @include respond-to(medium) {
+                        font-size: 1.667rem;
+                    }
+                }
+            }
+
+            @media screen and (min-width:650px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .sidebar-specials {
+                    width: 100%;
+                }
+
+                .sidebar-events {
+                    width: 50%;
+                }
+
+                .sidebar-pets {
+                    width: 50%;
+                }
+            }
+
+            @include respond-to('medium') {
+                display: block;
+                max-width: 325px;
+                line-height: 1;
+
+                .sidebar-events {
+                    width: 100%;
+                }
+
+                .sidebar-pets {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        @include respond-to(small) {
+            .sidebar-wrapper {
+                .sidebar-events {
+
+                    h2 {
+                        padding-right: 2em;
+                    }
+
+                    p {
+                        padding-right: 3.5em;
+                    }
+                }
+            }
+        }
+
+        @include respond-to(small-land) {
+            .sidebar-wrapper {
+                .sidebar-events {
+
+                    h2 {
+                        padding-right: 2em;
+                    }
+
+                    p {
+                        padding-right: 3.5em;
+                    }
+                }
+            }
+        }
+
+        @include respond-to(medium) {
+            background-image: none;
+            .sidebar-wrapper {
+                .sidebar-events {
+
+                    h2 {
+                        padding-right: 0;
+                    }
+
+                    p {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

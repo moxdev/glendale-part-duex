@@ -1,0 +1,32 @@
+body {
+    color: $color__text-main;
+    font-family: $font__light;
+    font-size: 15px;
+    line-height: $line-height-body;
+    font-size: $font__size-body;
+}
+
+button,
+input,
+select,
+textarea {
+	color: inherit;
+	font-family: inherit;
+	@include font-size(1);
+	line-height: inherit;
+}
+
+/*--------------------------------------------------------------
+## Fonts
+--------------------------------------------------------------*/
+@import "fonts";
+
+/*--------------------------------------------------------------
+## Headings
+--------------------------------------------------------------*/
+@import "headings";
+
+/*--------------------------------------------------------------
+## Copy
+--------------------------------------------------------------*/
+@import "copy";

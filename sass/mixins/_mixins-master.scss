@@ -1,0 +1,103 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+    font-size: ($sizeValue * 16) * 1px;
+    font-size: $sizeValue * 1rem;
+}
+
+@mixin max-width($maxwidth) {
+  max-width: $maxwidth;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// Outside padding
+@mixin padding-left-right() {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+
+    @include respond-to('tablet') {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+// Absolute position
+@mixin absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin reset {
+  padding:0;
+  margin: 0;
+}
+
+// Breakpoints for neat span-columns
+
+$breakpoints: (
+  'x-small'    : ( min-width:  310px ),
+  'small'      : ( min-width:  400px ),
+  'small-land' : ( min-width:  560px ),
+  'tablet'     : ( min-width:  760px ),
+  'medium'     : ( min-width:  960px ),
+  'large'      : ( min-width: 1200px ),
+  'x-large'    : ( min-width: 1500px ),
+  'xx-large'   : ( min-width: 1800px ),
+);
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+// @include respond-to(small)
+
+// Center block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+    clear: both;
+}
+
+// color all links
+// @mixin linx ($link, $visit, $hover, $active) {
+//   a {
+//     color: $link;
+//     &:visited {
+//       color: $visit;
+//     }
+//     &:hover {
+//       color: $hover;
+//     }
+//     &:active {
+//       color: $active;
+//     }
+//   }
+// }
+// how to include
+// @include linx(white, blue, green, red);
