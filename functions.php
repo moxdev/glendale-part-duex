@@ -353,57 +353,62 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Load sidebar content for the homepage sidebar file.
  */
 require get_template_directory() . '/inc/homepage-sidebar.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Load sidebar content for the specials section.
  */
 require get_template_directory() . '/inc/specials-sidebar.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Loads the taglines.
  */
 require get_template_directory() . '/inc/content-tagline.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Loads the floorplans.
  */
 require get_template_directory() . '/inc/floorplans.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Loads the contact content.
  */
 require get_template_directory() . '/inc/contact-page-content.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Loads the community list info.
  */
 require get_template_directory() . '/inc/community-page-list.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Loads the community page map.
  */
 require get_template_directory() . '/inc/community-page-map.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Loads the photo gallery.
  */
 require get_template_directory() . '/inc/photo-gallery.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Loads the custom featured image.
  */
 require get_template_directory() . '/inc/featured-image.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Displays the apartment features section.
  */
-require get_template_directory() . '/inc/features-amenities.php';
+require get_template_directory() . '/inc/features.php';
 
 /**
- * Load sidebar content for the global sidebar file.
+ * Displays the apartment amenities section.
+ */
+require get_template_directory() . '/inc/amenities.php';
+
+/**
+ * Displays apartment availability.
  */
 require get_template_directory() . '/inc/apartment-availability.php';
 

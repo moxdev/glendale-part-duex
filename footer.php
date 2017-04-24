@@ -13,10 +13,20 @@
         </div><!-- .content-wrapper -->
 
         <!-- // Displays the Features and Amenities sections if they exist -->
-        <?php if (is_page_template( 'page-amenities.php' ) && function_exists( 'glendale_features_amenities' ) ) { ?>
+        <?php if (is_page_template( 'page-amenities.php' ) ) { ?>
+
             <div class="feature-amenities-wrapper">
-                <?php echo glendale_features_amenities(); ?>
-            </div>
+
+                <?php if ( function_exists( 'glendale_apartment_features' ) ) {
+                    glendale_apartment_features();
+                }
+
+                if ( function_exists( 'glendale_apartment_amenities' ) ) {
+                    glendale_apartment_amenities();
+                } ?>
+
+            </div><!-- feature-amenities-wrapper -->
+
         <?php } ?>
 
         <!-- // Displays the Floor Plans sections if they exist-->

@@ -775,6 +775,12 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/inc\/amenities.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/amenities.php",
+		"oF": 0
+		},
 	"\/inc\/apartment-availability.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -829,10 +835,10 @@
 		"oAP": "\/inc\/featured-image.php",
 		"oF": 0
 		},
-	"\/inc\/features-amenities.php": {
+	"\/inc\/features.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/features-amenities.php",
+		"oAP": "\/inc\/features.php",
 		"oF": 0
 		},
 	"\/inc\/floorplans.php": {
@@ -845,18 +851,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/frontpage-header.php",
-		"oF": 0
-		},
-	"\/inc\/header-example.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/header-example.php",
-		"oF": 0
-		},
-	"\/inc\/homepage-sidebar-backup.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/homepage-sidebar-backup.php",
 		"oF": 0
 		},
 	"\/inc\/homepage-sidebar.php": {

@@ -1,4 +1,4 @@
-.home {
+.page-template-frontpage {
 
     #secondary {
         background-image: url(imgs/deco-background.svg);
@@ -64,9 +64,10 @@
                 }
             }
 
-            .sidebar-events {
+            .homepage-events {
                 padding: 1em .5em;
                 border-bottom: 2px solid $color__brand-black;
+                width: 100%;
 
                 h2 {
                     @include reset;
@@ -74,7 +75,6 @@
                     color: $color__brand-gray;
                     font-family: $font__black;
                     text-transform: uppercase;
-
                 }
 
                 h3 {
@@ -93,11 +93,11 @@
 
                 @include respond-to(medium) {
                     h2 {
-                        font-size: 2.267rem;
+                        font-size: 1.667rem;
                     }
 
                     h3 {
-                        font-size: 1.4rem;
+                        font-size: 1.3rem;
                     }
 
                     p {
@@ -106,9 +106,10 @@
                 }
             }
 
-            .sidebar-pets {
+            .homepage-announcements {
                 padding:1em .5em;
                 border-bottom: 2px solid $color__brand-black;
+                width: 100%;
 
                 h2 {
                     padding-right: 5px;
@@ -122,45 +123,17 @@
                         font-size: 1.667rem;
                     }
                 }
-            }
 
-            @media screen and (min-width:650px) {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-
-                .sidebar-specials {
-                    width: 100%;
-                }
-
-                .sidebar-events {
-                    width: 50%;
-                }
-
-                .sidebar-pets {
-                    width: 50%;
-                }
-            }
-
-            @include respond-to('medium') {
-                display: block;
-                max-width: 325px;
-                line-height: 1;
-
-                .sidebar-events {
-                    width: 100%;
-                }
-
-                .sidebar-pets {
-                    width: 100%;
+                h4 {
+                    margin-top: 1em;
+                    margin-bottom: .5em;
                 }
             }
         }
 
-
         @include respond-to(small) {
             .sidebar-wrapper {
-                .sidebar-events {
+                .homepage-events {
 
                     h2 {
                         padding-right: 2em;
@@ -175,7 +148,7 @@
 
         @include respond-to(small-land) {
             .sidebar-wrapper {
-                .sidebar-events {
+                .homepage-events {
 
                     h2 {
                         padding-right: 2em;
@@ -191,7 +164,7 @@
         @include respond-to(medium) {
             background-image: none;
             .sidebar-wrapper {
-                .sidebar-events {
+                .homepage-events {
 
                     h2 {
                         padding-right: 0;

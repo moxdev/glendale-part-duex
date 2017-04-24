@@ -58,7 +58,7 @@ function glendale_homepage_sidebar() {
                             <?php endif; ?>
 
                             <?php if( !empty($ev_text ) ): ?>
-                                <p><?php echo esc_html( $ev_text ); ?></p>
+                                <p><?php echo $ev_text; ?></p>
                             <?php endif; ?>
 
                         </div>
